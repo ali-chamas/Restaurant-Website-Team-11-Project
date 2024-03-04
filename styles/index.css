@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color:#f1f1f0 ;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+}
+
+header{
+    position: fixed;
+    padding: 15px 45px;
+    z-index: 10;
+}
+
+nav{
+    display: flex;
+}
+
+nav a:hover{
+    opacity: 0.9;
+}
+
+.mobile-menu{
+    display: none;
+    font-size: 30px;
+}
+
+@media (max-width:500px) {
+
+    header{
+        padding: 15px 20px ;
+    }
+
+    nav{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}

@@ -1,0 +1,64 @@
+.btn-style{
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-style:hover{
+    opacity: 0.85;
+}
+
+.shadow:hover{
+    box-shadow: 0px 1px 3px 2px gainsboro;
+}
+
+.special-font{
+    font-family: "Courgette", cursive;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+.w-full{
+    width: 100%;
+}
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.align-center{
+    align-items: center;
+}
+
+.gap{
+    gap:20px
+}
+
+.h1-size{
+    font-size: 50px;
+}
+
+@media (max-width:600px){
+
+    .h1-size{
+    font-size: 30px;
+    }
+}
