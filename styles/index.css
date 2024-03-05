@@ -7,6 +7,7 @@
 
 body{
     background-color:#eaeae7 ;
+    overflow-x: hidden;
 }
 
 a{
@@ -36,6 +37,44 @@ nav a:hover{
     font-size: 30px;
 }
 
+footer{
+    padding: 30px 35px;
+    background-color: white;
+}
+footer >div{
+    gap: 15px;
+}
+footer a{
+    color: black;
+}
+footer h1{
+    color: #ffb936;
+}
+footer a:hover{
+    opacity: 0.85;
+    
+}
+footer >div a{
+    font-size: 15px;
+    color: rgb(41, 41, 41);
+}
+
+@media (max-width:768px){
+    header h1{
+        font-size: 26px;
+    }
+    nav a{
+        font-size: 13px;
+    }
+
+    footer h1{
+        font-size: 26px;
+    }
+    footer >div a{
+        font-size: 13px;
+    }
+}
+
 @media (max-width:500px) {
 
     header{
@@ -47,5 +86,8 @@ nav a:hover{
     }
     .mobile-menu{
         display: block;
+    }
+    footer{
+        padding: 30px 10px;
     }
 }
