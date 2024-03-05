@@ -17,50 +17,102 @@ const loginError=document.getElementById('login-err')
 let username=''
 let email=''
 let password=''
+let validationError=false;
+
+const resetInputs=()=>{
+    username=''
+    email=''
+    password=''
+}
 
 const switchToSignUp=()=>{
     loginBox.style.display='none';
     signupBpx.style.display='flex';
-    header.innerText="Oh! Hello There!"
+    header.innerText="Oh! Hello There!";
+    resetInputs()
 }
 
 const switchToLogin=()=>{
     loginBox.style.display='flex';
     signupBpx.style.display='none';
-    header.innerText="Welcome back!"
+    header.innerText="Welcome back!";
+    resetInputs()
 }
 
 
-const validateForm=()=>{
+const validateForm=(type)=>{
+    if(type=='signup')
     
-        if(email==="" ||password===""|| username=="" ){
-            loginError.innerText='Oops! please fill everything'
+        if(email=="" ||password==""|| username=="" ){
+            signupError.innerText='Oops! please fill everything';
+            validationError=true;
+            
         }
-    
-       
+        else{
+            validationError=false
+        }
+
+    if(type=='login')
+    if(email==="" ||password===""){
+        loginError.innerText='Oops! please fill everything';
+        validationError=true;
+    }else{
+        validationError=false
+    }
 }
 
 const handleLogin=()=>{
-    validateForm()
-    users.map((user,i)=>{
-        if(user.email.toLowerCase()===email.toLowerCase() && user.password===password) {
-            
-                // window.localStorage.setItem('session',JSON.stringify(user))
-                window.location.assign('/pages/restaurants')
-        }
-        else{
-            loginError.innerText='wrong email or password'
-        }
-    })
-}
 
-loginEmail.addEventListener('change',function(e){
-    email=e.target.value;
-})
-console.log(email);
+    validateForm('login');
+    
+    !validationError&&
+        users.map((user,i)=>{
+            if(user.email.toLowerCase()===email.toLowerCase() && user.password===password) {
+                
+                    window.localStorage.setItem('session',JSON.stringify(user))
+                    window.location.assign('./pages/restaurant')
+            }
+            else{
+                loginError.innerText='wrong email or password'
+            }
+        })
+    }   
+
+    const handleSignUp=()=>{
+        validateForm('signup');
+
+        //had to use for loop because I have to break
+
+        if(!validationError)
+         for(let i = 0 ; i<users.length;i++){
+            if(users[i].email.toLowerCase()===email.toLowerCase()) {
+                
+                    signupError.innerText='email already in use';
+                    break;
+            }
+            else{
+                users.push({name:username,email:email,password:password,favourites:[]});
+                window.localStorage.setItem('users',JSON.stringify(users))
+                handleLogin()
+                break;
+            }
+        }
+           
+           
+    }
+
+
+loginEmail.addEventListener('change',(e)=>email=e.target.value)
+loginPassword.addEventListener('change',(e)=>password=e.target.value)
+
+signupName.addEventListener('change',(e)=>username=e.target.value)
+signupEmail.addEventListener('change',(e)=>email=e.target.value)
+signupPassword.addEventListener('change',(e)=>password=e.target.value)
+
+
 
 signupSwitch.addEventListener('click',switchToSignUp);
 loginSwitch.addEventListener('click',switchToLogin);
 
 loginBtn.addEventListener('click',handleLogin);
-
+signupBtn.addEventListener('click',handleSignUp)
