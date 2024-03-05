@@ -15,4 +15,15 @@ section>div{
 section>div>div{
     padding: 30px 40px;
 }
+section span{
+    cursor: pointer;
+    color: rgb(44, 44, 44);
+}
 
+.signup-box{
+    display: none;
+}
+
+.signup-err{
+    display: none;
+}

@@ -44,13 +44,22 @@
     
     <section class="flex w-full h-full">
         <div class="flex column gap center">
-            <h1 class="h1-size special-font text-white">Welcome back!</h1>
-            <div class="bg-secondary flex column gap align-center shadow border-radius">
+            <h1 class="h1-size special-font text-white" id="welcome-header">Welcome back!</h1>
+            <div class="bg-secondary flex column gap align-center shadow border-radius login-box" id="login-box">
                 
-                <input type="text" placeholder="Email">
-                <input type="password" placeholder="password">
-                <button class="btn-style bg-primary">Login</button>
-                <small>Already have an account?<span> Sign Up</span></small>
+                <input type="text" placeholder="Email" id="login-email">
+                <input type="password" placeholder="password" id="login-password">
+                <button class="btn-style bg-primary" id="login-btn">Login</button>
+                <small>Already have an account?<span id="signup-switch"> Sign Up</span></small>
+                <small class="text-danger login-err" id="login-err"></small>
+            </div>
+            <div class="bg-secondary flex column gap align-center shadow border-radius signup-box" id="signup-box">
+                <input type="text" placeholder="Full Name" id="signup-name">
+                <input type="text" placeholder="Email" id="signup-email">
+                <input type="password" placeholder="password" id="signup-password">
+                <button class="btn-style bg-primary" id="signup-btn">Sign Up</button>
+                <small>Oh you're already our user?<span id="login-switch"> Login</span></small>
+                <small class="text-danger signup-err" id="signup-err"></small>
             </div>
         </div>
        
@@ -74,6 +83,9 @@
            <a href="/">Donate</a> 
        </div>
    </footer>
+
+   <script  type="text/javascript" src="../scripts/models/users.js"></script>
+   <script type="text/javascript"  src="../scripts/pages/login.js"></script>
    
 </body>
 </html>

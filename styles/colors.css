@@ -9,3 +9,10 @@
 .text-white{
     color: white;
 }
+
+.text-danger{
+    color: rgb(171, 0, 0);
+}
+.bg-danger{
+    color: rgb(171, 0, 0);
+}
