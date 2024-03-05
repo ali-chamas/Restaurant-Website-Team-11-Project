@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rest-Où</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="./styles/colors.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/utilities.css">
-    <link rel="stylesheet" href="./styles/pages/hero.css">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/utilities.css">
+    
+    
 
     <!-- Icons -->
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +24,7 @@
     <script src="https://kit.fontawesome.com/96cf59c222.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    
     <header class="flex w-full justify-between align-center">
         
         <h1>
@@ -42,13 +43,8 @@
 
     </header>
 
-    <section class="hero-section  w-full">
-         <div class="flex column gap center text-white">
-            <h1 class="special-font  h1-size">Welcome to Rest-Où!
-            </h1>
-            <p>Your best choice to eat out with friends <br>Your best food companion</p>
-         </div>
-        
+    <section class="h-full w-full flex center">
+        <button class="btn-style bg-danger" id="logout-btn">Logout</button>
     </section>
 
     <footer class="flex w-full  align-center justify-evenly">
@@ -68,6 +64,9 @@
             <a href="/">Donate</a> 
         </div>
     </footer>
-    <script src="./scripts/common/header.js"></script>
+ 
+    <script src="../scripts/common/unsecure.js"></script>
+    <script src="../scripts/common/header.js"></script>
+    <script src="../scripts/pages/profile.js"></script>
 </body>
 </html>

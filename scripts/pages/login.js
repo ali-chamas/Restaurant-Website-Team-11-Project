@@ -1,3 +1,9 @@
+//secured routing
+const session = window.localStorage.getItem('session')
+if(session!='none'){
+    window.location.assign('/')
+}
+
 
 const header=document.getElementById('welcome-header');
 const loginBox=document.getElementById('login-box')
@@ -70,7 +76,7 @@ const handleLogin=()=>{
             if(user.email.toLowerCase()===email.toLowerCase() && user.password===password) {
                 
                     window.localStorage.setItem('session',JSON.stringify(user))
-                    window.location.assign('./pages/restaurant')
+                    window.location.assign('/')
             }
             else{
                 loginError.innerText='wrong email or password'
