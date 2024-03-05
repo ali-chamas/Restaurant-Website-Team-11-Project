@@ -10,9 +10,14 @@
     color: white;
 }
 
+
 .text-danger{
     color: rgb(171, 0, 0);
 }
 .bg-danger{
     color: rgb(171, 0, 0);
+}
+.border-color{
+    border-color: rgb(98, 98, 98);
+
 }
