@@ -10,6 +10,6 @@
     color: white;
 }
 
-.border-color{
-    border-color: rgb(98, 98, 98);
+.bg-grey{
+    background-color: rgba(151, 151, 151, 0.645);
 }
