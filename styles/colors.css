@@ -2,6 +2,10 @@
     background-color: #ffb936;
 }
 
+.bg-secondary{
+    background-color: white;
+}
+
 .text-white{
     color: white;
 }
