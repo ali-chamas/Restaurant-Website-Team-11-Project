@@ -1,0 +1,12 @@
+.test{
+    background-color: rgb(0, 0, 0);
+    height: 400px;
+}
+
+.filters{
+    background-color: aqua;
+}
+
+.restaurant-header{
+    padding: 15px 45px;
+}
