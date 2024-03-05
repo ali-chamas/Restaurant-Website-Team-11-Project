@@ -5,14 +5,14 @@
    background-position: center;
    overflow: hidden;
    z-index: -1;
-   background-image: url('../assets/hero-section/background-img.jpg');
+   background-image: url('../../assets/hero-section/background-img.jpg');
    
 }
 
 .hero-section >div{
     width: 100%;
     height: 100%;
-    background-color: #0000003e;
+    background-color: #00000093;
     backdrop-filter: blur(3px);
 }
 
