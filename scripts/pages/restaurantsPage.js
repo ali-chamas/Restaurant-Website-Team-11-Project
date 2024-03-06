@@ -1,7 +1,7 @@
 const restaurantsContainer=document.getElementById('restaurants-container');
 const localRests=JSON.parse(window.localStorage.getItem('restaurants'));
 const searchInput=document.getElementById('search-input')
-
+const filterItems=document.querySelectorAll('.filter-item')
 let searchvalue=''
 
 const fetchRestaurants=(array)=>{
@@ -34,3 +34,12 @@ searchInput.addEventListener('change',(e)=>{
     searchvalue=e.target.value;
     searchRestauarants(searchvalue);
 })
+
+console.log(filterItems)
+
+for(let i =0;i<filterItems.length;i++){
+    filterItems[i].addEventListener('click',()=>{
+        console.log(filterItems[i].innerText);
+        //code here
+    })
+}

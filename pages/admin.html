@@ -78,18 +78,20 @@
            <form class=" column gap center bg-cards border-radius" id="form">
             <h2>Add a restaurant</h2>
             <div>
-                <input type="text" placeholder="name">
-                <input type="text" placeholder="logo">
-                <input type="text" placeholder="image">
+                <input type="text" placeholder="name" id="rest-name">
+                <input type="text" placeholder="logo" id="res-logo">
+                <input type="text" placeholder="image" id="rest-img">
+                <input type="text" placeholder="type (chinese...)" id="rest-type">
+                <input type="text" placeholder="Location (Beirut...)" id="rest-location">
             </div>
             <div class="flex column gap">
             <div>
-                <input type="text" placeholder="item name">
-                <input type="text" placeholder="item image">
-                <input type="text" placeholder="item-price">
+                <input type="text" placeholder="item name" id="menu-name">
+                <input type="text" placeholder="item image" id="menu-image">
+                <input type="text" placeholder="item-price" id="menu-price">
                 <button class="btn-style bg-primary border-radius" id="add-menu-item"><i class="fa-solid fa-plus text-white" ></i></button>
             </div>
-            <div class="flex gap menu-container">
+            <div class="flex gap menu-container" id="added-menu">
                 <div class="bg-secondary">
                     <small>burger</small>
                     <button><i class="fa-solid fa-trash text-danger"></i></button>
@@ -127,6 +129,8 @@
      <script src="../scripts/models/users.js"></script>
      <script src="../scripts/models/restaurants.js"></script>
      <script src="../scripts/pages/admin.js"></script>
+     <script src="../scripts/pages/addRestaurant.js"></script>
+     
    
 </body>
 </html>
