@@ -1,0 +1,117 @@
+.card{
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.571);
+    max-width: 300px;
+}
+
+.card h3{
+    text-align: center;
+    padding: 10px;
+}
+
+.card img{
+    max-width: 200px;
+}
+
+.cards-section{
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    height: fit-content; 
+}
+
+.test{
+    /* background-color: black; */
+    padding: 20px;
+}
+
+.profile-card{
+    width: 30%;
+    height: 70%;
+    margin-top: 35px;
+    padding-top: 30px;
+    background-color: rgba(255, 255, 255, 0.571);
+    min-width: 250px;
+}
+
+.profile-image{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.profile-card h4{
+    text-align: center;
+}
+
+.profile-container{
+    margin-top: 30px;
+    padding-top: 30px;
+    height: 80%;
+    width: 70%;
+}
+
+.profile-card p{
+    margin: 20px;
+    color: #b1a9a9;;
+}
+
+.restaurant-container{
+    width: 70%;
+}
+
+.restaurant-card{
+    flex-grow: 1;
+    height: 200px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.571);
+    max-width: 200px;
+}
+
+.favorite-restaurant{
+    padding: 10px;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.restaurant-container h2{
+    margin-left: 20px ;
+}
+
+.rest-image{
+    min-height: 50px;
+}
+
+@media (max-width:768px){
+    header h1{
+        font-size: 26px;
+    }
+    nav a{
+        font-size: 13px;
+    }
+
+    footer h1{
+        font-size: 26px;
+    }
+    footer >div a{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:500px) {
+
+    header{
+        padding: 15px 20px ;
+    }
+
+    nav{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    footer{
+        padding: 30px 10px;
+    }
+}
+
