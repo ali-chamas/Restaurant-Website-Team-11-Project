@@ -3,8 +3,6 @@
     height: fit-content;
 }
 
-
-
 .filters-container{
     width: 20%;
     height: 110vh;
@@ -52,9 +50,6 @@
     padding: 20px;
 }
 
-.search-bar{
-    max-width: 300px;
-}
 
 input {
     width: 100%;

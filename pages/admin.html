@@ -53,10 +53,17 @@
 
     <section class="h-full w-full flex column align-center justify-start gap">
         <div class="flex gap data-switch">
-            <button class="btn-style">Users <i class="fa-solid fa-user"></i></button>
-            <button class="btn-style bg-primary">Restaurants <i class="fa-solid fa-utensils"></i></button>
+            <button class="btn-style bg-primary text-white">Users <i class="fa-solid fa-user"></i></button>
+            <button class="btn-style ">Restaurants <i class="fa-solid fa-utensils"></i></button>
         </div>
-        <button class="btn-style bg-danger" id="logout-btn">Logout</button>
+        <div class="search-bar w-full" >
+            <input type="text" placeholder="Search..." class="bg-grey w-full border-radius" id="search-input" />
+        </div>
+        <p id="number-of-users"></p>
+        <div class="flex w-full column gap users-container" id="users-container">
+            
+        </div>
+        <button class="btn-style text-white bg-danger" id="logout-btn">Logout</button>
     </section>
 
     <footer class="flex w-full  align-center justify-evenly">
@@ -78,9 +85,9 @@
     </footer>
  
     <script src="../scripts/common/unsecure.js"></script>
-     
-     <script src="../scripts/pages/admin.js"></script>
     <script src="../scripts/common/header.js"></script>
+     <script src="../scripts/models/users.js"></script>
+     <script src="../scripts/pages/admin.js"></script>
    
 </body>
 </html>

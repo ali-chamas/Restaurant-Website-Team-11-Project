@@ -1,7 +1,32 @@
 section{
-    padding: 12vh 0;
+    padding: 14vh 10px;
 }
 
-.data-switch .black-text{
-    color: black;
+.users-container{
+    max-width: 500px;
+    max-height: 600px;
+    overflow: auto;
+    
+}
+.users-container>div{
+    padding: 15px;
+}
+.users-container h2{
+    font-size:18px;
+}
+.users-container small{
+    color: gray;
+}
+.users-container button:hover{
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+@media (max-width:500px) {
+    .users-container h2{
+        font-size:13px;
+    }
+    .users-container small{
+       font-size: 10px;
+    }
 }
