@@ -51,17 +51,55 @@
     </header>
 
 
-    <section class="h-full w-full flex column align-center justify-start gap">
+    <section class=" w-full flex column align-center justify-start gap">
+        <h1 class="special-font">Welcome Admin</h1>
         <div class="flex gap data-switch">
-            <button class="btn-style bg-primary text-white">Users <i class="fa-solid fa-user"></i></button>
-            <button class="btn-style ">Restaurants <i class="fa-solid fa-utensils"></i></button>
+            <button class="btn-style bg-primary text-white" id="users-switch">Users <i class="fa-solid fa-user"></i></button>
+            <button class="btn-style " id="restaurants-switch">Restaurants <i class="fa-solid fa-utensils"></i></button>
         </div>
         <div class="search-bar w-full" >
             <input type="text" placeholder="Search..." class="bg-grey w-full border-radius" id="search-input" />
         </div>
-        <p id="number-of-users"></p>
-        <div class="flex w-full column gap users-container" id="users-container">
+        <div class="users-section flex w-full column align-center gap" id="users-section">
+            <p id="number-of-users"></p>
+            <div class="flex w-full column gap users-container" id="users-container">
+                
+            </div>
+        </div>
+        <div class="restaurants-section flex w-full column align-center gap" id="restaurants-section">
             
+            <p id="number-of-restaurants"></p>
+            
+            <div class="flex w-full center gap card-container" id="restaurants-container">
+                
+                
+            </div>
+            <button class="add-btn bg-primary border-radius" id="open-form"><i class="fa-solid fa-plus text-white"></i></button>
+           <form class=" column gap center bg-cards border-radius" id="form">
+            <h2>Add a restaurant</h2>
+            <div>
+                <input type="text" placeholder="name">
+                <input type="text" placeholder="logo">
+                <input type="text" placeholder="image">
+            </div>
+            <div class="flex column gap">
+            <div>
+                <input type="text" placeholder="item name">
+                <input type="text" placeholder="item image">
+                <input type="text" placeholder="item-price">
+                <button class="btn-style bg-primary border-radius" id="add-menu-item"><i class="fa-solid fa-plus text-white" ></i></button>
+            </div>
+            <div class="flex gap menu-container">
+                <div class="bg-secondary">
+                    <small>burger</small>
+                    <button><i class="fa-solid fa-trash text-danger"></i></button>
+                </div>
+                
+            </div>
+        </div>
+            <button class="btn-style text-white bg-primary" id="add-restaurant">Add</button>
+            
+           </form>
         </div>
         <button class="btn-style text-white bg-danger" id="logout-btn">Logout</button>
     </section>
@@ -87,6 +125,7 @@
     <script src="../scripts/common/unsecure.js"></script>
     <script src="../scripts/common/header.js"></script>
      <script src="../scripts/models/users.js"></script>
+     <script src="../scripts/models/restaurants.js"></script>
      <script src="../scripts/pages/admin.js"></script>
    
 </body>

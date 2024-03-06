@@ -70,6 +70,7 @@ input {
 .card{
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.571);
+    max-width: 300px;
 }
 
 .card h3{

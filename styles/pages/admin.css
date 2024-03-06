@@ -1,5 +1,6 @@
 section{
     padding: 14vh 10px;
+    height: fit-content;
 }
 
 .users-container{
@@ -20,6 +21,62 @@ section{
 .users-container button:hover{
     cursor: pointer;
     opacity: 0.85;
+}
+
+
+
+.card-container{
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+
+.card{
+    padding: 20px;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.571);
+}
+
+.card h3{
+    text-align: center;
+    padding: 10px;
+}
+
+.card img{
+    max-width: 200px;
+}
+
+.restaurants-section{
+    padding: 0 30px;
+    
+}
+.add-btn{
+    padding: 30px;
+    font-size:30px
+}
+.add-btn:hover{
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+form{
+    padding: 20px;
+    max-width: 500px;
+    display: none;
+}
+
+form i{
+    font-size: 10px;
+}
+.menu-container{
+    flex-wrap: wrap;
+}
+.menu-container>div{
+    padding: 6px;
+    border-radius: 20px;
+}
+.menu-container button{
+    cursor: pointer;
 }
 
 @media (max-width:500px) {
