@@ -98,5 +98,7 @@ input {
 
     .mobile-filter{
         display: block;
+        padding: 30px;
+        font-size: 30px;
     }
 }
