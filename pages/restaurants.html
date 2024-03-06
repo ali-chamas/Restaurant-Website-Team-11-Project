@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../styles/pages/restaurants.css">
 
     <!-- Icons -->
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,68 +51,28 @@
 
 
     <section class="page h-full flex">
-        <div class="mobile-filter">
-            <i class="fa-solid fa-filter text-white"></i>
+        <div class="mobile-filter" id="mobile-toggle">
+            <i class="fa-solid fa-filter "></i>
         </div>
-        <div class="filters-container flex column gap border-radius">
-            <div class="filter-top w-full flex column justify-center gap">
+        <div class="filters-container  column gap border-radius" id="filters-container">
+            <div class="filter-top w-full flex column justify-center gap" id="filter-type">
                 <h3 class="special-font">Cuisine</h3>
 
-                <div class="filter-item flex align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> Italian cuisine</p>
+                <div class="filter-item type-filter flex border-radius align-center">
+                    <p>All</p>
                 </div>
 
-                <div class="flex filter-item align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> Lebanese cuisine</p>
-                </div>
-
-                <div class="filter-item flex align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> French cuisine</p>
-                </div>
-
-                <div class="filter-item flex align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> Armenian cuisine</p>
-                </div>
-
-                <div class="filter-item flex align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> Chinese cuisine</p>
-                </div>
             </div>
             
-            <div class="filter-bottom flex column  justify-center gap">
+            <div class="filter-bottom flex column  justify-center gap" id="filter-location">
                 <h3 class="special-font">Location</h3>
 
-                <div class="filter-item flex align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> Beirut</p>
-                </div>
-
-                <div class="flex filter-item align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> Aley</p>
-                </div>
-
-                <div class="filter-item flex align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> Jbeil</p>
-                </div>
-
-                <div class="filter-item flex align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> Baalbeck</p>
-                </div>
-
-                <div class="filter-item flex align-center">
-                    <div class="checkbox bg-primary"></div>
-                    <p> Batroun</p>
+                <div class="filter-item location-filter flex border-radius align-center">
+                    <p> All</p>
                 </div>
             </div>
         </div>
+        
 
         <div class="main flex column center">
             <div class="search-bar w-full">
