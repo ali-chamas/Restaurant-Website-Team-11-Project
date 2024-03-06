@@ -1,7 +1,11 @@
-.test{
-    /* background-color: rgb(0, 0, 0); */
+.page{
     padding: 10vh 10vh 0vh 0vh;
     height: fit-content;
+}
+
+.header{
+    background-color: #00000093;
+    backdrop-filter: blur(3px);
 }
 
 .filters-container{
@@ -60,7 +64,6 @@ input {
 .mobile-filter{
     display: none;
 }
-
 
 .card-container{
     flex-wrap: wrap;
