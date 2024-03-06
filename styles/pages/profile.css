@@ -31,6 +31,7 @@
     margin-top: 35px;
     padding-top: 30px;
     background-color: rgba(255, 255, 255, 0.571);
+    min-width: 250px;
 }
 
 .profile-image{
@@ -44,7 +45,6 @@
 }
 
 .profile-container{
-    /* background-color: black ; */
     margin-top: 30px;
     padding-top: 30px;
     height: 80%;
@@ -61,10 +61,11 @@
 }
 
 .restaurant-card{
-    width: 30%;
+    flex-grow: 1;
     height: 200px;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.571);
+    max-width: 200px;
 }
 
 .favorite-restaurant{
@@ -81,21 +82,36 @@
     min-height: 50px;
 }
 
-@media (max-width:1200px) {
-    .filters-container{
-        display: none;
+@media (max-width:768px){
+    header h1{
+        font-size: 26px;
+    }
+    nav a{
+        font-size: 13px;
     }
 
-    .mobile-filter{
-        display: block;
-        padding: 30px;
-        font-size: 30px;
-        width:5%;
-        
+    footer h1{
+        font-size: 26px;
     }
-    .mobile-filter i{
-        color: rgb(63, 63, 63);
+    footer >div a{
+        font-size: 13px;
     }
 }
 
+@media (max-width:500px) {
+
+    header{
+        padding: 15px 20px ;
+    }
+
+    nav{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    footer{
+        padding: 30px 10px;
+    }
+}
 
