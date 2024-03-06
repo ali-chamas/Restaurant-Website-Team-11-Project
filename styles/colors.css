@@ -2,6 +2,10 @@
     background-color: #ffb936;
 }
 
+.text-primary{
+    color: #ffb936;
+}
+
 .bg-secondary{
     background-color: white;
 }
@@ -21,6 +25,10 @@
 
 .bg-grey{
     background-color: rgba(202, 202, 202, 0.645);
+}
+
+.bg-btn{
+    background-color: #eaeae7;
 }
 
 .text-danger{
