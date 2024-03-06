@@ -108,6 +108,13 @@ const searchUsers=(input)=>{
     fetchUsers(searchedUsers)
 }
 
+const searchRestauarants=(input)=>{
+    restaurantsContainer.innerHTML=''
+    const searchedRest=restaurants.filter((res)=>res.name.toLowerCase().includes(input.toLowerCase()));
+    restaurantsCount=searchedRest.length;
+    fetchRestaurants(searchedRest)
+}
+
 const deleteUser=(index)=>{
     localUsers.splice(index,1)
     window.localStorage.setItem('users',JSON.stringify(localUsers))
@@ -124,7 +131,9 @@ userSwitch.addEventListener('click',switchToUsers)
 
 searchInput.addEventListener('change',(e)=>{
     searchValue=e.target.value;
+    if(userSwitch.classList.contains('bg-primary'))
     searchUsers(searchValue)
+    else searchRestauarants(searchValue)
 
 })
 

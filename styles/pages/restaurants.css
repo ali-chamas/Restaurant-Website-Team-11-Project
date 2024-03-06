@@ -61,15 +61,6 @@ input {
     display: none;
 }
 
-<<<<<<< HEAD
-=======
-.card-container{
-    flex-wrap: wrap;
-    width: 100%;
-    height: fit-content;
-}
-
->>>>>>> 0cb6e915b22824d9f5600361c6bb7a134ac8e58c
 .card{
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.571);
