@@ -51,6 +51,7 @@ nav a:hover{
 footer{
     padding: 30px 35px;
     background-color: white;
+    bottom: 0;
 }
 footer >div{
     gap: 15px;

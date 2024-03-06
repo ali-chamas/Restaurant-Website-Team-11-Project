@@ -1,8 +1,6 @@
-section{
-    margin-bottom: 30px;
-}
+
 .half-bg{
-    height: 100vh;
+    height: 100%;
     width: 50vw;
     background-position: 50%;
     z-index: -1;
@@ -13,6 +11,7 @@ section{
     width: 50vw;
     padding: 120px 20px 0px 50px;
     background-color: #eaeae7;
+    margin-bottom: 30px;
 }
 
 .restaurants-container h2{

@@ -5,8 +5,8 @@ let restaurants=[
         img2:'../assets/hero-section/background-img.jpg',
         description:'Crepaway is a restaurant in hamra, they offer a menu of various food,',
         menu:[
-            {img:'',name:'Burger'},
-            {img:'',name:'pizza'}
+            {img:'C:\For Ali\sefactory\week 1\tech\Restaurant-Website-Team-11-Project\assets\menu-items\MIGHTY-CHICKEN-400x294.jpg',name:'Burger',price:13},
+            {img:'C:\For Ali\sefactory\week 1\tech\Restaurant-Website-Team-11-Project\assets\menu-items\MIGHTY-CHICKEN-400x294.jpg',name:'pizza',price:25}
         ]
 
     },
@@ -16,8 +16,8 @@ let restaurants=[
         img2:'../assets/hero-section/background-img.jpg',
         description:'dsds',
         menu:[
-            {img:'',name:'Burger'},
-            {img:'',name:'pizza'}
+            {img:'C:\For Ali\sefactory\week 1\tech\Restaurant-Website-Team-11-Project\assets\menu-items\MIGHTY-CHICKEN-400x294.jpg',name:'Burger',price:20},
+            {img:'C:\For Ali\sefactory\week 1\tech\Restaurant-Website-Team-11-Project\assets\menu-items\MIGHTY-CHICKEN-400x294.jpg',name:'pizza',price:10}
         ]
         
     }
