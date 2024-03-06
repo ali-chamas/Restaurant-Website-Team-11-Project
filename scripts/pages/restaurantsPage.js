@@ -1,14 +1,50 @@
 const restaurantsContainer=document.getElementById('restaurants-container');
-const localRests=JSON.parse(window.localStorage.getItem('restaurants'));
-const searchInput=document.getElementById('search-input')
-const filterItems=document.querySelectorAll('.filter-item')
-let searchvalue=''
+let localRests=JSON.parse(window.localStorage.getItem('restaurants'));
+const searchInput=document.getElementById('search-input');
+const users=JSON.parse(window.localStorage.getItem('users'))
+const typeContainer=document.getElementById('filter-type')
+const locationContainer=document.getElementById('filter-location')
+const filterToggle = document.getElementById('mobile-toggle')
+const filtersContainer=document.getElementById('filters-container')
 
-let type = 'lebanese'
+let types=[
+    'Lebanese cuisine',
+    'Chinese cuisine',
+    'Italian cuisine'
+]
 
+let locations=[
+    'Beirut',
+    'Jbeil',
+    'Baalbak',
+    'Janoub',
+    'Tripoli'
+]
 
-console.log(localRests.filter((rest)=>rest.type.toLowerCase()===type.toLowerCase()))
+types.map((type,i)=>{
+    typeContainer.innerHTML+=`  <div class="filter-item type-filter flex border-radius align-center">
+                                    <p>${type}</p>
+                                </div>
+                                `
+})
 
+locations.map((location,i)=>{
+    locationContainer.innerHTML+=`<div class="filter-item location-filter flex border-radius align-center">
+                                    <p> ${location}</p>
+                                </div>`
+})
+
+const typeFilter=document.querySelectorAll('.type-filter')
+const locationFilter=document.querySelectorAll('.location-filter')
+
+const filterByType=(input)=>{
+    localRests= localRests.filter(rest=>rest.type=input)
+    fetchRestaurants(localRests)
+}
+const filterByLocation=(input)=>{
+    localRests=localRests.filter(rest=>rest.location=input)
+    fetchRestaurants(localRests)
+}
 const fetchRestaurants=(array)=>{
     restaurantsContainer.innerHTML='';
     array.map((rest,i)=>{
@@ -17,7 +53,7 @@ const fetchRestaurants=(array)=>{
         <div>
             <h3 class="special-font">${rest.name}</h3>
             <div class="flex gap">
-                <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
+                <button class="btn-style shadow bg-btn" onClick="addToFavourites(${i}) " ><i class="fa-regular fa-heart text-primary"></i></button>
                 <a href="/pages/single-restaurant.html?id=${i}" class="btn-style special-font shadow bg-primary">Details</a>
             </div>
         </div>
@@ -26,25 +62,129 @@ const fetchRestaurants=(array)=>{
     })
 }
 
+
 const searchRestauarants=(input)=>{
     restaurantsContainer.innerHTML=''
     const searchedRest=localRests.filter((res)=>res.name.toLowerCase().includes(input.toLowerCase()));
     fetchRestaurants(searchedRest)
 }
 
+const checkFavs=()=>{
+    const user = JSON.parse(window.localStorage.getItem('session'));
+    for(let i= 0 ; i<user.favourites.length;i++){
+        for(let j = 0;j<localRests.length;j++){
+            if(user.favourites[i].name==localRests[j].name){
+                hearts[j].classList.add('text-danger')
+            }
+            else{
+                
+            }
+            
+        }
+    }
+    
+}
 
-fetchRestaurants(localRests)
+
+
+
+
+
+const addToFavourites=(index)=>{
+    const user = JSON.parse(window.localStorage.getItem('session'));
+    if(hearts[index].classList.contains('text-danger')){
+       
+        user.favourites=user.favourites.filter(favs=>favs.name!==localRests[index].name)
+        console.log(user)
+        for(let i = 0;i<users.length;i++){
+            if(users[i].email===user.email){
+                users[i]=user;
+            }
+        }
+        window.localStorage.setItem('session',JSON.stringify(user))
+        window.localStorage.setItem('users',JSON.stringify(users))
+        
+        hearts[index].classList.remove('text-danger')
+    }
+    else{
+        
+        user.favourites.push(localRests[index]);
+        window.localStorage.setItem('session',JSON.stringify(user))
+        for(let i = 0;i<users.length;i++){
+            if(users[i].email===user.email){
+                users[i]=user;
+            }
+        }
+        window.localStorage.setItem('users',JSON.stringify(users))
+        
+        hearts[index].classList.add('text-danger')
+    }
+}
+
+
+fetchRestaurants(localRests);
+const hearts = document.querySelectorAll('.fa-heart')
+
+checkFavs();
 
 searchInput.addEventListener('change',(e)=>{
     searchvalue=e.target.value;
     searchRestauarants(searchvalue);
 })
 
-console.log(filterItems)
 
-for(let i =0;i<filterItems.length;i++){
-    filterItems[i].addEventListener('click',()=>{
-        console.log(filterItems[i].innerText);
-        //code here
+const toggleActive=(array1,array2,selected)=>{
+    for(let j = 0 ; j<array1.length;j++){
+        if(array1[j].classList.contains('active')){
+            array1[j].classList.remove('active')
+        }
+    }
+    for(let j = 0 ; j<array2.length;j++){
+        if(array2[j].classList.contains('active')){
+            array2[j].classList.remove('active')
+        }
+    }
+    selected.classList.add('active')
+}
+
+for(let i = 0;i<typeFilter.length;i++){
+    
+        typeFilter[i].addEventListener('click',()=>{
+            if(typeFilter[i].innerText!='All'){
+                const filtered =localRests.filter(rest=>rest.type==typeFilter[i].innerText)
+                fetchRestaurants(filtered);
+                toggleActive(typeFilter,locationFilter,typeFilter[i])
+            }else{
+                fetchRestaurants(localRests)
+                
+               toggleActive(typeFilter,locationFilter,typeFilter[i])
+            }
+            
+        }
+        )
+    }
+   
+
+for(let i = 0;i<locationFilter.length;i++){
+   
+    locationFilter[i].addEventListener('click',()=>{
+        if(locationFilter[i].innerText!='All'){
+            const filtered= localRests.filter(rest=>rest.location==locationFilter[i].innerText)
+            fetchRestaurants(filtered)
+            toggleActive(locationFilter,typeFilter,locationFilter[i])
+        }else{
+            fetchRestaurants(localRests)
+            
+            toggleActive(locationFilter,typeFilter,locationFilter[i])
+        }
     })
 }
+
+filterToggle.addEventListener('click',()=>{
+    if(filtersContainer.style.display=='none'||filtersContainer.style.display=='' )filtersContainer.style.display='flex';
+    else filtersContainer.style.display='none'
+    
+
+})
+
+

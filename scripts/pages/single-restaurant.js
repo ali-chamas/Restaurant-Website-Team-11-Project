@@ -26,7 +26,12 @@ fetchRestaurant()
 imageContainer.innerHTML=`<img class="image" src=${restaurant.img2} />`;
 infoContainer.innerHTML=`<h2 class="special-font">${restaurant.name}</h2>
 <p>${restaurant.description}</p>
+<div class="flex gap">
+<p><b>Type :</b> ${restaurant.type}</p>
+<p><b>Location :</b> ${restaurant.location}</p>
+</div>
 <h2 class="special-font">Menu</h2>
+
 <div class="restaurants-cards-container flex justify-between gap" id='menu-container'>
 </div>
 `

@@ -80,7 +80,7 @@ const fetchUsers=(users)=>{
     
 }
 
-
+console.log(restaurants)
 const fetchRestaurants=(restaurants)=>{
     restaurantsCountCountainer.innerHTML=''
     restaurantsContainer.innerHTML=''

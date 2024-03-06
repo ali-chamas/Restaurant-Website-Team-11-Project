@@ -43,7 +43,8 @@ section{
 }
 
 .card img{
-    max-width: 200px;
+    width: 200px;
+    height: 200px;
 }
 
 .restaurants-section{
@@ -61,9 +62,11 @@ section{
 
 form{
     padding: 20px;
+    width: 500px;
     max-width: 500px;
     display: none;
 }
+
 
 form i{
     font-size: 10px;
@@ -85,5 +88,15 @@ form i{
     }
     .users-container small{
        font-size: 10px;
+    }
+    form{
+        width: 300px;
+        max-width: 300px;
+    }
+    form div{
+        flex-direction: column;
+    }
+    .menu-container{
+        flex-direction: row;
     }
 }

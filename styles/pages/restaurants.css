@@ -10,6 +10,7 @@
     margin-top: 30px;
     padding-top: 10px;
     background-color: rgba(255, 255, 255, 0.571);
+    display: flex;
 }
 
 .filter-top{
@@ -17,17 +18,26 @@
     border-right: 2px;
     padding: 0px 20px;
 }
+.filter-item:hover{
+    color: black;
+    opacity: 0.9;
+    cursor: pointer;
+    background-color: rgba(218, 218, 218, 0.425);
+}
 .filter-item p{
     font-size: 12px;
 }
 
 .filter-bottom{
-    
     border-bottom: 2px;
     border-right: 2px;
     padding: 0px 20px ;
 }
 
+.active{
+    background-color: #ffb936;
+    color: white;
+}
 
 .filters-container h3{
   text-align: center;  
@@ -73,7 +83,8 @@ input {
 }
 
 .card img{
-    max-width: 200px;
+    width: 200px;
+    height: 200px;
 }
 
 .cards-section{
@@ -84,19 +95,24 @@ input {
  
 }
 
-@media (max-width:1200px) {
+@media (max-width:900px) {
     .filters-container{
         display: none;
+        position: absolute;
+        backdrop-filter: blur(15px);
+        width: 100%;
+        
     }
-
+    
     .mobile-filter{
         display: block;
-        padding: 30px;
-        font-size: 30px;
-        width:5%;
+        padding: 10px;
+        font-size: 20px;
+        width:auto;
         
     }
     .mobile-filter i{
-        color: rgb(63, 63, 63);
+        color: rgba(96, 96, 96, 0.413);
+        
     }
 }

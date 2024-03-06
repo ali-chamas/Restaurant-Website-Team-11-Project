@@ -14,7 +14,7 @@
     
 
     <!-- Icons -->
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,23 +29,23 @@
     <header class="flex w-full justify-between align-center header-bg">
         
         <h1>
-            <a href="./index.html" class="special-font text-white ">Rest-Où</a>
+            <a href="/index.html" class="special-font text-white ">Rest-Où</a>
         </h1>
         <nav class="text-white gap align-center ">
-            <a href="./pages/restaurants.html" class="text-white">Restaurants</a>
+            <a href="/pages/restaurants.html" class="text-white">Restaurants</a>
             <a href="" class="text-white">About</a>
-            <a href="./pages/login.html" class="btn-style text-white special-font shadow bg-primary" id="header-login-btn">Login</a>
-            <a href="./pages/profile.html" class="text-white profile-icon" id="header-profile-btn"><i class="fa-solid fa-user"></i></a>
+            <a href="/pages/login.html" class="btn-style text-white special-font shadow bg-primary" id="header-login-btn">Login</a>
+            <a href="/pages/profile.html" class="text-white profile-icon" id="header-profile-btn"><i class="fa-solid fa-user"></i></a>
         </nav>
 
         <div class="mobile-menu" id="mobile-menu">
             <i class="fa-solid fa-bars text-white"  ></i>
         </div>
         <div class="header-bg mobile-nav column gap align-center w-full mobile-display" id="mobile-nav">
-            <a href="./pages/restaurants.html" class="text-white">Restaurants</a>
+            <a href="/pages/restaurants.html" class="text-white">Restaurants</a>
             <a href="" class="text-white">About</a>
-            <a href="./pages/login.html" class="btn-style text-white special-font shadow bg-primary" id="mobile-login-btn">Login</a>
-            <a href="./pages/profile.html" class="text-white profile-icon" id="mobile-profile-btn" ><i class="fa-solid fa-user"></i></a>
+            <a href="/pages/login.html" class="btn-style text-white special-font shadow bg-primary" id="mobile-login-btn">Login</a>
+            <a href="/pages/profile.html" class="text-white profile-icon" id="mobile-profile-btn" ><i class="fa-solid fa-user"></i></a>
         </div>
 
     </header>
@@ -75,27 +75,33 @@
                 
             </div>
             <button class="add-btn bg-primary border-radius" id="open-form"><i class="fa-solid fa-plus text-white"></i></button>
-           <form class=" column gap center bg-cards border-radius" id="form">
+           <form class=" column gap center bg-cards border-radius " id="form">
             <h2>Add a restaurant</h2>
-            <div>
-                <input type="text" placeholder="name" id="rest-name">
-                <input type="text" placeholder="logo" id="res-logo">
-                <input type="text" placeholder="image" id="rest-img">
-                <input type="text" placeholder="type (chinese...)" id="rest-type">
-                <input type="text" placeholder="Location (Beirut...)" id="rest-location">
+            <div class="flex column gap">
+                <div class="flex gap">
+                    <input type="text" placeholder="name" id="rest-name">
+                    <input type="text" placeholder="logo" id="rest-logo">
+                </div>
+                <div class="flex gap ">
+                    <input type="text" placeholder="image" id="rest-img">
+                    <input type="text" placeholder="type (chinese...)" id="rest-type">
+                  </div>
+                  <div class="flex gap ">
+                    <input type="text" placeholder="Location (Beirut...)" id="rest-location">
+                    <textarea id="rest-desc" placeholder="description"></textarea>
+                    </div>
+
+                
             </div>
             <div class="flex column gap">
-            <div>
+            <div class="flex column gap">
                 <input type="text" placeholder="item name" id="menu-name">
-                <input type="text" placeholder="item image" id="menu-image">
+                <input type="text" placeholder="item image" id="menu-img">
                 <input type="text" placeholder="item-price" id="menu-price">
-                <button class="btn-style bg-primary border-radius" id="add-menu-item"><i class="fa-solid fa-plus text-white" ></i></button>
+                <button type="button" class="btn-style bg-primary border-radius" id="add-menu-item"><i class="fa-solid fa-plus text-white" ></i></button>
             </div>
             <div class="flex gap menu-container" id="added-menu">
-                <div class="bg-secondary">
-                    <small>burger</small>
-                    <button><i class="fa-solid fa-trash text-danger"></i></button>
-                </div>
+                
                 
             </div>
         </div>
@@ -108,9 +114,9 @@
 
     <footer class="flex w-full  align-center justify-evenly">
         <div class="flex column">
-            <a href="/" >Restaurants</a>
-            <a href="/">About</a>
-            <a href="/">Login</a>
+            <a href="/pages/restaurants.html" >Restaurants</a>
+            <a href="/">Home</a>
+            <a href="/pages/login.html">Login</a>
         </div>
         <div class="flex">
             <h1 class="special-font ">
@@ -118,9 +124,9 @@
             </h1>
         </div>
         <div class="flex column">
-            <a href="/">Instagram <i class="fa-brands fa-instagram"></i></a>
-            <a href="/">Facebook <i class="fa-brands fa-facebook"></i></a>  
-            <a href="/">Donate</a> 
+            <a href="#">Instagram <i class="fa-brands fa-instagram"></i></a>
+            <a href="#">Facebook <i class="fa-brands fa-facebook"></i></a>  
+            <a href="#">Donate</a> 
         </div>
     </footer>
  
