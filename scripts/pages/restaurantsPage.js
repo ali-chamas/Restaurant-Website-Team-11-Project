@@ -23,12 +23,7 @@ let locations=[
 
 
 
-// types.map((type,i)=>{
-//     typeContainer.innerHTML+=`  <div class="filter-item type-filter flex border-radius align-center">
-//                                     <p>${type}</p>
-//                                 </div>
-//                                 `
-// })
+  
 
 locations.map((location,i)=>{
     locationContainer.innerHTML+=`<div class="filter-item location-filter flex border-radius align-center">
@@ -36,13 +31,9 @@ locations.map((location,i)=>{
                                 </div>`
 })
 
-// const typeFilter=document.querySelectorAll('.type-filter')
+
 const locationFilter=document.querySelectorAll('.location-filter')
 
-// const filterByType=(input)=>{
-//     localRests= localRests.filter(rest=>rest.type=input)
-//     fetchRestaurants(localRests)
-// }
 
 
 const filterByLocation=(input)=>{
@@ -150,22 +141,7 @@ const toggleActive=(array1,selected)=>{
     selected.classList.add('active')
 }
 
-// for(let i = 0;i<typeFilter.length;i++){
-    
-//         typeFilter[i].addEventListener('click',()=>{
-//             if(typeFilter[i].innerText!='All'){
-//                 const filtered =localRests.filter(rest=>rest.type.toLowerCase()==typeFilter[i].innerText.toLowerCase())
-//                 fetchRestaurants(filtered);
-//                 toggleActive(typeFilter,locationFilter,typeFilter[i])
-//             }else{
-//                 fetchRestaurants(localRests)
-                
-//                toggleActive(typeFilter,locationFilter,typeFilter[i])
-//             }
-            
-//         }
-//         )
-//     }
+
    
 
 for(let i = 0;i<locationFilter.length;i++){
