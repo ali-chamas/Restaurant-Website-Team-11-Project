@@ -2,7 +2,6 @@ const restaurantsContainer=document.getElementById('restaurants-container');
 let localRests=JSON.parse(window.localStorage.getItem('restaurants'));
 const searchInput=document.getElementById('search-input');
 const users=JSON.parse(window.localStorage.getItem('users'))
-const typeContainer=document.getElementById('filter-type')
 const locationContainer=document.getElementById('filter-location')
 const filterToggle = document.getElementById('mobile-toggle')
 const filtersContainer=document.getElementById('filters-container')
@@ -22,14 +21,14 @@ let locations=[
 ]
 
 
-console.log(localRests)
 
-types.map((type,i)=>{
-    typeContainer.innerHTML+=`  <div class="filter-item type-filter flex border-radius align-center">
-                                    <p>${type}</p>
-                                </div>
-                                `
-})
+
+// types.map((type,i)=>{
+//     typeContainer.innerHTML+=`  <div class="filter-item type-filter flex border-radius align-center">
+//                                     <p>${type}</p>
+//                                 </div>
+//                                 `
+// })
 
 locations.map((location,i)=>{
     locationContainer.innerHTML+=`<div class="filter-item location-filter flex border-radius align-center">
@@ -37,17 +36,22 @@ locations.map((location,i)=>{
                                 </div>`
 })
 
-const typeFilter=document.querySelectorAll('.type-filter')
+// const typeFilter=document.querySelectorAll('.type-filter')
 const locationFilter=document.querySelectorAll('.location-filter')
 
-const filterByType=(input)=>{
-    localRests= localRests.filter(rest=>rest.type=input)
-    fetchRestaurants(localRests)
-}
+// const filterByType=(input)=>{
+//     localRests= localRests.filter(rest=>rest.type=input)
+//     fetchRestaurants(localRests)
+// }
+
+
 const filterByLocation=(input)=>{
     localRests=localRests.filter(rest=>rest.location=input)
     fetchRestaurants(localRests)
 }
+
+
+
 const fetchRestaurants=(array)=>{
     restaurantsContainer.innerHTML='';
     array.map((rest,i)=>{
@@ -136,36 +140,32 @@ searchInput.addEventListener('change',(e)=>{
 })
 
 
-const toggleActive=(array1,array2,selected)=>{
+const toggleActive=(array1,selected)=>{
     for(let j = 0 ; j<array1.length;j++){
         if(array1[j].classList.contains('active')){
             array1[j].classList.remove('active')
         }
     }
-    for(let j = 0 ; j<array2.length;j++){
-        if(array2[j].classList.contains('active')){
-            array2[j].classList.remove('active')
-        }
-    }
+    
     selected.classList.add('active')
 }
 
-for(let i = 0;i<typeFilter.length;i++){
+// for(let i = 0;i<typeFilter.length;i++){
     
-        typeFilter[i].addEventListener('click',()=>{
-            if(typeFilter[i].innerText!='All'){
-                const filtered =localRests.filter(rest=>rest.type.toLowerCase()==typeFilter[i].innerText.toLowerCase())
-                fetchRestaurants(filtered);
-                toggleActive(typeFilter,locationFilter,typeFilter[i])
-            }else{
-                fetchRestaurants(localRests)
+//         typeFilter[i].addEventListener('click',()=>{
+//             if(typeFilter[i].innerText!='All'){
+//                 const filtered =localRests.filter(rest=>rest.type.toLowerCase()==typeFilter[i].innerText.toLowerCase())
+//                 fetchRestaurants(filtered);
+//                 toggleActive(typeFilter,locationFilter,typeFilter[i])
+//             }else{
+//                 fetchRestaurants(localRests)
                 
-               toggleActive(typeFilter,locationFilter,typeFilter[i])
-            }
+//                toggleActive(typeFilter,locationFilter,typeFilter[i])
+//             }
             
-        }
-        )
-    }
+//         }
+//         )
+//     }
    
 
 for(let i = 0;i<locationFilter.length;i++){
@@ -174,11 +174,11 @@ for(let i = 0;i<locationFilter.length;i++){
         if(locationFilter[i].innerText!='All'){
             const filtered= localRests.filter(rest=>rest.location.toLowerCase()==locationFilter[i].innerText.toLowerCase())
             fetchRestaurants(filtered)
-            toggleActive(locationFilter,typeFilter,locationFilter[i])
+            toggleActive(locationFilter,locationFilter[i])
         }else{
             fetchRestaurants(localRests)
             
-            toggleActive(locationFilter,typeFilter,locationFilter[i])
+            toggleActive(locationFilter,locationFilter[i])
         }
     })
 }

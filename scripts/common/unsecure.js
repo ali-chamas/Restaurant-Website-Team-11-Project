@@ -1,6 +1,6 @@
 //secured routing
 
 if(window.localStorage.getItem('session')=='none'){
-    window.location.assign('/')
+    window.location.assign('/pages/login.html')
 }
 

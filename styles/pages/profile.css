@@ -1,3 +1,8 @@
+section{
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
 .card{
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.571);
@@ -20,16 +25,12 @@
     height: fit-content; 
 }
 
-.test{
-    /* background-color: black; */
-    padding: 20px;
-}
 
 .profile-card{
     width: 30%;
     height: 70%;
     margin-top: 35px;
-    padding-top: 30px;
+    padding: 30px 10px;
     background-color: rgba(255, 255, 255, 0.571);
     min-width: 250px;
 }
@@ -52,7 +53,7 @@
 }
 
 .profile-card p{
-    margin: 20px;
+    
     color: #b1a9a9;;
 }
 
@@ -96,6 +97,17 @@
     footer >div a{
         font-size: 13px;
     }
+    .profile-container{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .restaurant-container{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width:500px) {
@@ -113,5 +125,6 @@
     footer{
         padding: 30px 10px;
     }
+    
 }
 

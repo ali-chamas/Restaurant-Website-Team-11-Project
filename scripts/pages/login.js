@@ -1,7 +1,7 @@
 //secured routing
 
 if(session!='none'){
-    window.location.assign('/')
+    window.location.assign('/pages/resaurants.html')
 }
 
 
