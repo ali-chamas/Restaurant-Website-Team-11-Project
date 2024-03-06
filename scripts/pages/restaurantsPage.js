@@ -7,7 +7,7 @@ let searchvalue=''
 let type = 'lebanese'
 
 
-console.log(localRests.filter((rest)=>rest.type.toLowerCase()===type.toLowerCase()))
+
 
 const fetchRestaurants=(array)=>{
     restaurantsContainer.innerHTML='';
