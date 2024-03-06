@@ -1,0 +1,22 @@
+.half-bg{
+    height: 100vh;
+    width: 50vw;
+    background-position: 50%;
+    z-index: -1;
+}
+
+.restaurants-container{
+    width: 50vw;
+    padding: 120px 20px 0px 100px;
+    background-color: #eaeae7;
+}
+
+.restaurants-container h2{
+    font-size: 36px;
+}
+
+.restaurants-cards-container{
+    width: 70%;
+    /* padding: 120px 20px 0px 100px; */
+    background-color: black;
+}
