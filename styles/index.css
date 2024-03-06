@@ -10,6 +10,10 @@ body{
     overflow-x: hidden;
 }
 
+section{
+    min-height: 50vh;
+}
+
 a{
     text-decoration: none;
 }

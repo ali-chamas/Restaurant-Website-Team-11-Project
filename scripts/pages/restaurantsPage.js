@@ -21,6 +21,9 @@ let locations=[
     'Tripoli'
 ]
 
+
+console.log(localRests)
+
 types.map((type,i)=>{
     typeContainer.innerHTML+=`  <div class="filter-item type-filter flex border-radius align-center">
                                     <p>${type}</p>
@@ -151,7 +154,7 @@ for(let i = 0;i<typeFilter.length;i++){
     
         typeFilter[i].addEventListener('click',()=>{
             if(typeFilter[i].innerText!='All'){
-                const filtered =localRests.filter(rest=>rest.type==typeFilter[i].innerText)
+                const filtered =localRests.filter(rest=>rest.type.toLowerCase()==typeFilter[i].innerText.toLowerCase())
                 fetchRestaurants(filtered);
                 toggleActive(typeFilter,locationFilter,typeFilter[i])
             }else{
@@ -169,7 +172,7 @@ for(let i = 0;i<locationFilter.length;i++){
    
     locationFilter[i].addEventListener('click',()=>{
         if(locationFilter[i].innerText!='All'){
-            const filtered= localRests.filter(rest=>rest.location==locationFilter[i].innerText)
+            const filtered= localRests.filter(rest=>rest.location.toLowerCase()==locationFilter[i].innerText.toLowerCase())
             fetchRestaurants(filtered)
             toggleActive(locationFilter,typeFilter,locationFilter[i])
         }else{
@@ -181,10 +184,15 @@ for(let i = 0;i<locationFilter.length;i++){
 }
 
 filterToggle.addEventListener('click',()=>{
+    if(window.innerWidth<900)
     if(filtersContainer.style.display=='none'||filtersContainer.style.display=='' )filtersContainer.style.display='flex';
     else filtersContainer.style.display='none'
     
 
 })
+
+if(window.innerWidth>900){
+    filtersContainer.style.display='flex';
+}
 
 
