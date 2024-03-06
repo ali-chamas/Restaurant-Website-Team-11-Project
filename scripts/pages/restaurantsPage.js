@@ -4,6 +4,11 @@ const searchInput=document.getElementById('search-input')
 const filterItems=document.querySelectorAll('.filter-item')
 let searchvalue=''
 
+let type = 'lebanese'
+
+
+console.log(localRests.filter((rest)=>rest.type.toLowerCase()===type.toLowerCase()))
+
 const fetchRestaurants=(array)=>{
     restaurantsContainer.innerHTML='';
     array.map((rest,i)=>{
