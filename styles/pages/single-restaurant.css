@@ -1,5 +1,5 @@
 .half-bg{
-    height: 100vh;
+    height: 100%;
     width: 50vw;
     background-position: 50%;
     z-index: -1;
@@ -7,7 +7,7 @@
 
 .restaurants-container{
     width: 50vw;
-    padding: 120px 20px 0px 100px;
+    padding: 120px 20px 0px 50px;
     background-color: #eaeae7;
 }
 
@@ -15,8 +15,32 @@
     font-size: 36px;
 }
 
-.restaurants-cards-container{
+.restaurants-container p{
+    font-size: 18px;
     width: 70%;
-    /* padding: 120px 20px 0px 100px; */
-    background-color: black;
+}
+
+.restaurants-cards-container{
+    width: 100%;
+    flex-wrap: wrap;
+    height: fit-content;
+    
+}
+
+.card {
+    border: 1px solid;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.item-name {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
 }
