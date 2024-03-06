@@ -13,3 +13,7 @@
 .bg-grey{
     background-color: rgba(151, 151, 151, 0.645);
 }
+
+.border-color{
+    border-color: rgb(151, 151, 151);
+}

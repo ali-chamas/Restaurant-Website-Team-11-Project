@@ -61,26 +61,34 @@ input {
     display: none;
 }
 
-.cards-section{
+
+.card-container{
     flex-wrap: wrap;
     padding: 20px;
-    background-color: black;
     width: 100%;
     height: fit-content;
-    
 }
 
 .card{
-    height: 330px;
-    background-color: blue;
-    width: 30%;
-    min-width: 262px;
+    width: 325px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 20px;
+    height: 400px;
 }
 
-.image{
-    height: 100%;
+.card h3{
+    text-align: center;
+    padding: 10px;
+}
+
+
+.cards-section{
+    flex-wrap: wrap;
+    padding: 20px;
     width: 100%;
-    object-fit: cover;
+    height: fit-content;
+    
 }
 
 @media (max-width:1200px) {
