@@ -25,29 +25,37 @@
 </head>
 <body>
 
-    <header class="flex w-full justify-between align-center header">
+    <header class="flex w-full justify-between align-center header-bg">
         
         <h1>
-            <a href="../index.html" class="special-font text-white ">Rest-Où</a>
+            <a href="./index.html" class="special-font text-white ">Rest-Où</a>
         </h1>
         <nav class="text-white gap align-center ">
-            <a href="" class="text-white">Restaurants</a>
+            <a href="./pages/restaurants.html" class="text-white">Restaurants</a>
             <a href="" class="text-white">About</a>
-            <a href="./pages/login.html" class="btn-style special-font shadow bg-primary">Login</a>
+            <a href="./pages/login.html" class="btn-style text-white special-font shadow bg-primary" id="header-login-btn">Login</a>
+            <a href="./pages/profile.html" class="text-white profile-icon" id="header-profile-btn"><i class="fa-solid fa-user"></i></a>
         </nav>
 
-        <div class="mobile-menu">
-            <i class="fa-solid fa-bars text-white" ></i>
+        <div class="mobile-menu" id="mobile-menu">
+            <i class="fa-solid fa-bars text-white"  ></i>
+        </div>
+        <div class="header-bg mobile-nav column gap align-center w-full mobile-display" id="mobile-nav">
+            <a href="./pages/restaurants.html" class="text-white">Restaurants</a>
+            <a href="" class="text-white">About</a>
+            <a href="./pages/login.html" class="btn-style text-white special-font shadow bg-primary" id="mobile-login-btn">Login</a>
+            <a href="./pages/profile.html" class="text-white profile-icon" id="mobile-profile-btn" ><i class="fa-solid fa-user"></i></a>
         </div>
 
     </header>
+
 
     <section class="page h-full flex">
         <div class="mobile-filter">
             <i class="fa-solid fa-filter text-white"></i>
         </div>
-        <div class="filters-container">
-            <div class="filter-top flex column justify-between">
+        <div class="filters-container flex column gap border-radius">
+            <div class="filter-top w-full flex column justify-center gap">
                 <h3 class="special-font">Cuisine</h3>
 
                 <div class="filter-item flex align-center">
@@ -76,7 +84,7 @@
                 </div>
             </div>
             
-            <div class="filter-bottom flex column justify-between">
+            <div class="filter-bottom flex column  justify-center gap">
                 <h3 class="special-font">Location</h3>
 
                 <div class="filter-item flex align-center">
@@ -106,20 +114,26 @@
             </div>
         </div>
 
-        <div class="main flex column align-center">
-            <div class="search-bar">
-                <input type="text" placeholder="Search..." class="bg-grey border-radius" />
+        <div class="main flex column center">
+            <div class="search-bar w-full">
+                <input type="text" placeholder="Search..." class="bg-grey w-full border-radius" />
             </div>
 
-            <div class="cards-section flex justify-between gap">
+            <div class="cards-section flex center gap">
 
                 <div class="card border-radius border-color flex column align-center justify-between">
                     <img class="border-radius" src="../assets/restaurants-logos/Roadster.png" />
                     <div>
                         <h3 class="special-font">Roadster</h3>
+<<<<<<< HEAD
                         <div class="flex justify-between">
                             <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
                             <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
+=======
+                        <div class="flex gap">
+                            <button href=" " class="btn-style text-white special-font shadow bg-primary">1S</button>
+                            <a href=" " class="btn-style text-white  shadow bg-primary">Details</a>
+>>>>>>> 0cb6e915b22824d9f5600361c6bb7a134ac8e58c
                         </div>
                     </div>
                 </div>
@@ -128,9 +142,15 @@
                     <img class="border-radius" src="../assets/restaurants-logos/crepaway.png" />
                     <div>
                         <h3 class="special-font">crepaway</h3>
+<<<<<<< HEAD
                         <div class="flex justify-between">
                             <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
                             <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
+=======
+                        <div class="flex gap">
+                            <button href=" " class="btn-style special-font shadow bg-primary">1S</button>
+                            <a href=" " class="btn-style text-white text-white special-font shadow bg-primary">Details</a>
+>>>>>>> 0cb6e915b22824d9f5600361c6bb7a134ac8e58c
                         </div>
                     </div>
                 </div>
@@ -140,8 +160,13 @@
                     <div>
                         <h3 class="special-font">Chopsticks</h3>
                         <div class="flex justify-between">
+<<<<<<< HEAD
                             <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
                             <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
+=======
+                            <button href=" " class="btn-style special-font shadow bg-primary">1S</button>
+                            <a href=" " class="btn-style text-white text-white special-font shadow bg-primary">Details</a>
+>>>>>>> 0cb6e915b22824d9f5600361c6bb7a134ac8e58c
                         </div>
                     </div>
                 </div>
@@ -151,7 +176,11 @@
                     <div>
                         <h3 class="special-font">Restaurant name</h3>
                         <div class="flex justify-between">
+<<<<<<< HEAD
                             <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
+=======
+                            <button href=" " class="btn-styl text-whitee special-font shadow bg-primary">1S</button>
+>>>>>>> 0cb6e915b22824d9f5600361c6bb7a134ac8e58c
                             <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
                         </div>
                     </div>
@@ -162,8 +191,13 @@
                     <div>
                         <h3 class="special-font">Restaurant name</h3>
                         <div class="flex justify-between">
+<<<<<<< HEAD
                             <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
                             <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
+=======
+                            <button href=" " class="btn-style text-white special-font shadow bg-primary">1S</button>
+                            <a href=" " class="btn-style text-white special-font shadow bg-primary">Details</a>
+>>>>>>> 0cb6e915b22824d9f5600361c6bb7a134ac8e58c
                         </div>
                     </div>
                 </div>
@@ -204,6 +238,8 @@
     </footer>
 
     
+    <script src="../scripts/common/header.js"></script>
+    <script src="../scripts/common/unsecure.js"></script>
     
 </body>
 </html>

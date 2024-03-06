@@ -1,30 +1,33 @@
 .page{
-    padding: 10vh 10vh 0vh 0vh;
+    padding-top: 10vh;
     height: fit-content;
 }
 
-.header{
-    background-color: #00000093;
-    backdrop-filter: blur(3px);
-}
+
 
 .filters-container{
     width: 20%;
+    height: 110vh;
+    justify-content: start;
     margin-top: 30px;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.571);
 }
 
 .filter-top{
-    height: 50%;
     border-bottom: 2px;
     border-right: 2px;
-    padding: 20px 0px 20px 45px;
+    padding: 0px 20px;
+}
+.filter-item p{
+    font-size: 12px;
 }
 
 .filter-bottom{
-    height: 50%;
+    
     border-bottom: 2px;
     border-right: 2px;
-    padding: 20px 0px 20px 45px;
+    padding: 0px 20px ;
 }
 
 
@@ -33,14 +36,13 @@
 }
 
 .checkbox{
-    width: 28.5px;
-    height: 28.5px;
-    border-radius: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
 }
 
 .filter-item > p{
-    padding: 5px 10px 5px 10px;
-    font-size: 18px;
+    padding: 5px  ;
 }
 
 .main{
@@ -51,8 +53,7 @@
 }
 
 .search-bar{
-    width: 30%;
-    height: 30px;
+    max-width: 300px;
 }
 
 input {
@@ -65,12 +66,18 @@ input {
     display: none;
 }
 
+<<<<<<< HEAD
+=======
+.card-container{
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+
+>>>>>>> 0cb6e915b22824d9f5600361c6bb7a134ac8e58c
 .card{
-    width: 325px;
-    border-width: 1px;
-    border-style: solid;
     padding: 20px;
-    height: 400px;
+    background-color: rgba(255, 255, 255, 0.571);
 }
 
 .card h3{
@@ -78,6 +85,9 @@ input {
     padding: 10px;
 }
 
+.card img{
+    max-width: 200px;
+}
 
 .cards-section{
     flex-wrap: wrap;
@@ -96,5 +106,10 @@ input {
         display: block;
         padding: 30px;
         font-size: 30px;
+        width:5%;
+        
+    }
+    .mobile-filter i{
+        color: rgb(63, 63, 63);
     }
 }

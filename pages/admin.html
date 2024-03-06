@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/colors.css">
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/utilities.css">
+    <link rel="stylesheet" href="../styles/pages/admin.css">
     
     
 
@@ -50,7 +51,11 @@
     </header>
 
 
-    <section class="h-full w-full flex center">
+    <section class="h-full w-full flex column align-center justify-start gap">
+        <div class="flex gap data-switch">
+            <button class="btn-style">Users <i class="fa-solid fa-user"></i></button>
+            <button class="btn-style bg-primary">Restaurants <i class="fa-solid fa-utensils"></i></button>
+        </div>
         <button class="btn-style bg-danger" id="logout-btn">Logout</button>
     </section>
 
@@ -73,7 +78,9 @@
     </footer>
  
     <script src="../scripts/common/unsecure.js"></script>
+     
+     <script src="../scripts/pages/admin.js"></script>
     <script src="../scripts/common/header.js"></script>
-    <script src="../scripts/pages/profile.js"></script>
+   
 </body>
 </html>

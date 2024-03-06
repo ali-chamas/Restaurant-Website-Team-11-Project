@@ -10,12 +10,17 @@
     background-color: white;
 }
 
+.header-bg{
+    background-color: #b1a9a993;
+   
+}
+
 .text-white{
     color: white;
 }
 
 .bg-grey{
-    background-color: rgba(151, 151, 151, 0.645);
+    background-color: rgba(202, 202, 202, 0.645);
 }
 
 .bg-btn{
