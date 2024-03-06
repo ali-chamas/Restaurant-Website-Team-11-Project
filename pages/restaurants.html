@@ -116,79 +116,12 @@
 
         <div class="main flex column center">
             <div class="search-bar w-full">
-                <input type="text" placeholder="Search..." class="bg-grey w-full border-radius" />
+                <input type="text" placeholder="Search..." class="bg-grey w-full border-radius" id="search-input" />
             </div>
 
-            <div class="cards-section flex center gap">
+            <div class="cards-section flex center gap" id="restaurants-container">
 
-                <div class="card border-radius border-color flex column align-center justify-between">
-                    <img class="border-radius" src="../assets/restaurants-logos/Roadster.png" />
-                    <div>
-                        <h3 class="special-font">Roadster</h3>
-                        <div class="flex gap">
-                            <button href=" " class="btn-style text-white special-font shadow bg-primary">1S</button>
-                            <a href=" " class="btn-style text-white  shadow bg-primary">Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card border-radius border-color flex column align-center justify-between">
-                    <img class="border-radius" src="../assets/restaurants-logos/crepaway.png" />
-                    <div>
-                        <h3 class="special-font">crepaway</h3>
-                        <div class="flex justify-between">
-                            <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
-                            <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card border-radius border-color flex column align-center justify-between">
-                    <img class="border-radius" src="../assets/restaurants-logos/chopsticks.png" />
-                    <div>
-                        <h3 class="special-font">Chopsticks</h3>
-                        <div class="flex justify-between">
-                            <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
-                            <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card border-radius border-color flex column align-center justify-between">
-                    <img class="border-radius" src="../assets/logo.png" />
-                    <div>
-                        <h3 class="special-font">Restaurant name</h3>
-                        <div class="flex justify-between">
-                            <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
-                            <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card border-radius border-color flex column align-center justify-between">
-                    <img src="../assets/logo.png" />
-                    <div>
-                        <h3 class="special-font">Restaurant name</h3>
-                        <div class="flex justify-between">
-                            <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
-                            <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card border-radius border-color flex column align-center justify-between">
-                    <img src="../assets/logo.png" />
-                    <div>
-                        <h3 class="special-font">Restaurant name</h3>
-                        <div class="flex justify-between">
-                            <button class="btn-style shadow bg-btn" href=" " ><i class="fa-regular fa-heart text-primary"></i></button>
-                            <a href=" " class="btn-style special-font shadow bg-primary">Details</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
+             
             </div>  
         </div>
 
@@ -211,9 +144,11 @@
         </div>
     </footer>
 
-    
+    <script src="../scripts/models/restaurants.js"></script>
     <script src="../scripts/common/header.js"></script>
     <script src="../scripts/common/unsecure.js"></script>
+    <script src="../scripts/pages/restaurantsPage.js"></script>
+    
     
 </body>
 </html>

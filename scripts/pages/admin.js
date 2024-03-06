@@ -91,7 +91,7 @@ const fetchRestaurants=(restaurants)=>{
         <img src=${rest.img} class="border-radius" />
         <div class="flex align-center column">
             <h3 class="special-font">${rest.name}</h3>
-            <button class="bg-danger btn-style text-white">Delete</button>
+            <button onClick='deleteRestaurant(${i})' class="bg-danger btn-style text-white">Delete</button>
         </div>
     </div>`
     
@@ -118,7 +118,15 @@ const searchRestauarants=(input)=>{
 const deleteUser=(index)=>{
     localUsers.splice(index,1)
     window.localStorage.setItem('users',JSON.stringify(localUsers))
-    window.location.reload()
+    usersCount--
+    fetchUsers(localUsers)
+}
+
+const deleteRestaurant=(index)=>{
+    restaurants.splice(index,1)
+    window.localStorage.setItem('restaurants',JSON.stringify(restaurants))
+    restaurantsCount--
+    fetchRestaurants(restaurants)
 }
 
 
