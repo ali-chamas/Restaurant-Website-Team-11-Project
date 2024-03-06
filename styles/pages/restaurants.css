@@ -3,10 +3,7 @@
     height: fit-content;
 }
 
-.header{
-    background-color: #b1a9a993;
-    backdrop-filter: blur(5px);
-}
+
 
 .filters-container{
     width: 20%;

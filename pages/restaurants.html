@@ -25,22 +25,30 @@
 </head>
 <body>
 
-    <header class="flex w-full justify-between align-center header">
+    <header class="flex w-full justify-between align-center header-bg">
         
         <h1>
-            <a href="../index.html" class="special-font text-white ">Rest-Où</a>
+            <a href="./index.html" class="special-font text-white ">Rest-Où</a>
         </h1>
         <nav class="text-white gap align-center ">
-            <a href="" class="text-white">Restaurants</a>
+            <a href="./pages/restaurants.html" class="text-white">Restaurants</a>
             <a href="" class="text-white">About</a>
-            <a href="./pages/login.html" class="btn-style special-font shadow bg-primary">Login</a>
+            <a href="./pages/login.html" class="btn-style special-font shadow bg-primary" id="header-login-btn">Login</a>
+            <a href="./pages/profile.html" class="text-white profile-icon" id="header-profile-btn"><i class="fa-solid fa-user"></i></a>
         </nav>
 
-        <div class="mobile-menu">
-            <i class="fa-solid fa-bars text-white" ></i>
+        <div class="mobile-menu" id="mobile-menu">
+            <i class="fa-solid fa-bars text-white"  ></i>
+        </div>
+        <div class="header-bg mobile-nav column gap align-center w-full mobile-display" id="mobile-nav">
+            <a href="./pages/restaurants.html" class="text-white">Restaurants</a>
+            <a href="" class="text-white">About</a>
+            <a href="./pages/login.html" class="btn-style special-font shadow bg-primary" id="mobile-login-btn">Login</a>
+            <a href="./pages/profile.html" class="text-white profile-icon" id="mobile-profile-btn" ><i class="fa-solid fa-user"></i></a>
         </div>
 
     </header>
+
 
     <section class="page h-full flex">
         <div class="mobile-filter">
@@ -204,6 +212,8 @@
     </footer>
 
     
+    <script src="../scripts/common/header.js"></script>
+    <script src="../scripts/common/unsecure.js"></script>
     
 </body>
 </html>
