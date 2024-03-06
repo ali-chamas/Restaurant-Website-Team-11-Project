@@ -30,6 +30,10 @@ header{
     height: 10vh;
 }
 
+.profile-icon{
+    display: none;
+}
+
 nav{
     display: flex;
 }

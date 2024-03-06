@@ -10,10 +10,23 @@
     color: white;
 }
 
+<<<<<<< HEAD
 .bg-grey{
     background-color: rgba(151, 151, 151, 0.645);
 }
 
 .border-color{
     border-color: rgb(151, 151, 151);
+=======
+
+.text-danger{
+    color: rgb(171, 0, 0);
+}
+.bg-danger{
+    background-color: rgb(171, 0, 0);
+}
+.border-color{
+    border-color: rgb(98, 98, 98);
+
+>>>>>>> 25b58ad849db5474f0dfcbf07ac808eccdf74ef1
 }
