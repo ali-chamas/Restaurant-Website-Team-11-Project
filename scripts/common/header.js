@@ -2,7 +2,7 @@ const DesktopLoginBtn=document.getElementById('header-login-btn');
 const DesktopProfileBtn=document.getElementById('header-profile-btn');
 const mobileLogin=document.getElementById('mobile-login-btn');
 const mobileProfile=document.getElementById('mobile-profile-btn')
-
+const session = window.localStorage.getItem('session');
 const mobileMenuBtn=document.getElementById('mobile-menu')
 const mobileNav=document.getElementById('mobile-nav')
 
@@ -25,7 +25,7 @@ const toggleMenu=()=>{
         mobileNav.style.display='flex';
         mobileNav.classList.remove('mobile-display')
         mobileMenuBtn.innerHTML='<i class="fa-solid fa-xmark text-white" ></i>'
-        console.log('as')
+        
     }
     else{
         mobileNav.classList.add('mobile-display')

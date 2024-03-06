@@ -1,5 +1,5 @@
 //secured routing
-const session = window.localStorage.getItem('session')
+
 if(session!='none'){
     window.location.assign('/')
 }
