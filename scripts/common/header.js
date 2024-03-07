@@ -3,13 +3,16 @@ const DesktopProfileBtn=document.getElementById('header-profile-btn');
 const mobileLogin=document.getElementById('mobile-login-btn');
 const mobileProfile=document.getElementById('mobile-profile-btn')
 const session = window.localStorage.getItem('session');
-const mobileMenuBtn=document.getElementById('mobile-menu')
-const mobileNav=document.getElementById('mobile-nav')
+const mobileMenuBtn=document.getElementById('mobile-menu');
+const mobileNav=document.getElementById('mobile-nav');
 
+
+if(!session){
+    window.localStorage.setItem('users',JSON.stringify(users));
+}
 
 
 if(session=='none' || !session){
-    
     DesktopLoginBtn.style.display='block'
     mobileLogin.style.display='block'
     DesktopProfileBtn.style.display='none'
