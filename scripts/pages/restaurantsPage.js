@@ -74,9 +74,7 @@ const checkFavs=()=>{
             if(user.favourites[i].name==localRests[j].name){
                 hearts[j].classList.add('text-danger')
             }
-            else{
-                
-            }
+            
             
         }
     }
