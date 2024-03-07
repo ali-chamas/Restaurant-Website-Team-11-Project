@@ -7,17 +7,20 @@ const mobileMenuBtn=document.getElementById('mobile-menu')
 const mobileNav=document.getElementById('mobile-nav')
 
 
-if(session!='none'){
-    DesktopLoginBtn.style.display='none'
-    DesktopProfileBtn.style.display='block'
-    mobileLogin.style.display='none'
-    mobileProfile.style.display='block'
-   
-}else{
+
+if(session=='none' || !session){
+    
     DesktopLoginBtn.style.display='block'
     mobileLogin.style.display='block'
     DesktopProfileBtn.style.display='none'
     mobileProfile.style.display='none'
+    
+}else{
+    DesktopLoginBtn.style.display='none'
+    DesktopProfileBtn.style.display='block'
+    mobileLogin.style.display='none'
+    mobileProfile.style.display='block'
+    
 }
 
 const toggleMenu=()=>{

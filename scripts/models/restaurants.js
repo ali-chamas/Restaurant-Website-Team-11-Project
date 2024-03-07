@@ -7,8 +7,8 @@ let restaurants=[
         type:'Italian cuisine',
         location:'Beirut',
         menu:[
-            {img:'C:\For Ali\sefactory\week 1\tech\Restaurant-Website-Team-11-Project\assets\menu-items\MIGHTY-CHICKEN-400x294.jpg',name:'Burger',price:13},
-            {img:'C:\For Ali\sefactory\week 1\tech\Restaurant-Website-Team-11-Project\assets\menu-items\MIGHTY-CHICKEN-400x294.jpg',name:'pizza',price:25}
+            {img:'/assets/menu-items/MIGHTY-CHICKEN-400x294.jpg',name:'Burger',price:13},
+            {img:'/assets/menu-items/MIGHTY-CHICKEN-400x294.jpg',name:'pizza',price:25}
         ]
 
     },
@@ -20,8 +20,8 @@ let restaurants=[
         type:'Lebanese cuisine',
         location:'Aley',
         menu:[
-            {img:'C:\For Ali\sefactory\week 1\tech\Restaurant-Website-Team-11-Project\assets\menu-items\MIGHTY-CHICKEN-400x294.jpg',name:'Burger',price:20},
-            {img:'C:\For Ali\sefactory\week 1\tech\Restaurant-Website-Team-11-Project\assets\menu-items\MIGHTY-CHICKEN-400x294.jpg',name:'pizza',price:10}
+            {img:'/assets/menu-items/MIGHTY-CHICKEN-400x294.jpg',name:'Burger',price:20},
+            {img:'/assets/menu-items/MIGHTY-CHICKEN-400x294.jpg',name:'pizza',price:10}
         ]
         
     }
