@@ -21,6 +21,8 @@ const searchInput=document.getElementById('search-input');
 
 if(window.localStorage.getItem('restaurants')){
     restaurants=JSON.parse(window.localStorage.getItem('restaurants'))
+}else{
+    window.localStorage.setItem('restaurants',JSON.stringify(restaurants))
 }
 
 

@@ -1,6 +1,9 @@
 //secured routing
 
-if(session!='none'){
+if(session=='none' || !session){
+   
+}
+else{
     window.location.assign('/pages/resaurants.html')
 }
 
@@ -24,6 +27,10 @@ let username=''
 let email=''
 let password=''
 let validationError=false;
+
+if(!window.localStorage.getItem('users')){
+    window.localStorage.setItem('users',JSON.stringify(users))
+}
 
 const resetInputs=()=>{
     username=''
