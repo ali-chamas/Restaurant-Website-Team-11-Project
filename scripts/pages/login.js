@@ -1,6 +1,6 @@
 //secured routing
 
-if(session=='none' || !session){
+if(window.localStorage.getItem('session')=='none' || !JSON.parse(window.localStorage.getItem('session'))){
    
 }
 else{
@@ -28,9 +28,7 @@ let email=''
 let password=''
 let validationError=false;
 
-if(!window.localStorage.getItem('users')){
-    window.localStorage.setItem('users',JSON.stringify(users))
-}
+
 
 const resetInputs=()=>{
     username=''

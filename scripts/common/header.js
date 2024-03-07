@@ -7,12 +7,12 @@ const mobileMenuBtn=document.getElementById('mobile-menu');
 const mobileNav=document.getElementById('mobile-nav');
 
 
-if(!session){
+if(!JSON.parse(session) || session=='none'){
     window.localStorage.setItem('users',JSON.stringify(users));
 }
 
 
-if(session=='none' || !session){
+if(session=='none' || !JSON.parse(session)){
     DesktopLoginBtn.style.display='block'
     mobileLogin.style.display='block'
     DesktopProfileBtn.style.display='none'

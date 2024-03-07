@@ -18,7 +18,7 @@ let restaurants=[
         img2:'../assets/hero-section/background-img.jpg',
         description:'dsds',
         type:'Lebanese cuisine',
-        location:'Aley',
+        location:'Jbeil',
         menu:[
             {img:'/assets/menu-items/MIGHTY-CHICKEN-400x294.jpg',name:'Burger',price:20},
             {img:'/assets/menu-items/MIGHTY-CHICKEN-400x294.jpg',name:'pizza',price:10}
