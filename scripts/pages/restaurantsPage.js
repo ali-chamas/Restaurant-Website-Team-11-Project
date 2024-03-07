@@ -6,11 +6,11 @@ const locationContainer=document.getElementById('filter-location')
 const filterToggle = document.getElementById('mobile-toggle')
 const filtersContainer=document.getElementById('filters-container')
 
-let types=[
-    'Lebanese cuisine',
-    'Chinese cuisine',
-    'Italian cuisine'
-]
+// let types=[
+//     'Lebanese cuisine',
+//     'Chinese cuisine',
+//     'Italian cuisine'
+// ]
 
 let locations=[
     'Beirut',

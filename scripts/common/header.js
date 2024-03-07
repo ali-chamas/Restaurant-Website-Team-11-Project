@@ -24,8 +24,7 @@ const toggleMenu=()=>{
     if(mobileNav.classList.contains('mobile-display')){
         mobileNav.style.display='flex';
         mobileNav.classList.remove('mobile-display')
-        mobileMenuBtn.innerHTML='<i class="fa-solid fa-xmark text-white" ></i>'
-        
+        mobileMenuBtn.innerHTML='<i class="fa-solid fa-xmark text-white" ></i>'   
     }
     else{
         mobileNav.classList.add('mobile-display')

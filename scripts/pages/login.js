@@ -59,7 +59,7 @@ const validateForm=(type)=>{
         }
 
     if(type=='login')
-    if(email==="" ||password===""){
+    if(email==="" || password===""){
         loginError.innerText='Oops! please fill everything';
         validationError=true;
     }else{
