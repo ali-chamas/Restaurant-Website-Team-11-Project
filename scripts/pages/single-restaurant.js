@@ -42,7 +42,7 @@ restaurant.menu.map((item)=>{
                                 <img src=${item.img} />
                                 <div class="item-name flex justify-around align-center">
                                     <p>${item.name}</p>
-                                    <p> ${item.price} </p>
+                                    <p> ${item.price} $ </p>
                                 </div>
                             </div>`
 })

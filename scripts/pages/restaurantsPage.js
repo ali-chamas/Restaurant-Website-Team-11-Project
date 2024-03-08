@@ -22,7 +22,9 @@ let locations=[
 
 
 
-
+if(!window.localStorage.getItem('restaurants')){
+    window.localStorage.setItem('restaurants',JSON.stringify(restaurants))
+}
   
 
 locations.map((location,i)=>{
@@ -141,7 +143,6 @@ const toggleActive=(array1,selected)=>{
 
 
    
-
 for(let i = 0;i<locationFilter.length;i++){
    
     locationFilter[i].addEventListener('click',()=>{

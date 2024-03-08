@@ -72,21 +72,34 @@ const validateForm=(type)=>{
     }
 }
 
+
+
+
 const handleLogin=()=>{
 
     validateForm('login');
-    
-    !validationError&&
-        users.map((user,i)=>{
-            if(user.email.toLowerCase()===email.toLowerCase() && user.password===password) {
+    let isEqual=false
+    let user={}
+     if(!validationError)
+        for(let i=0;i<users.length;i++){
+            if(users[i].email.toLowerCase()===email.toLowerCase() && users[i].password===password) {
                 
-                    window.localStorage.setItem('session',JSON.stringify(user))
-                    window.location.assign('/')
+                
+                isEqual=true;
+                user=users[i]
+                break;
+             
             }
             else{
-                loginError.innerText='wrong email or password'
+                isEqual=false
             }
-        })
+        }
+        if(isEqual){
+            window.localStorage.setItem('session',JSON.stringify(user))
+            window.location.assign('/')
+        }
+        else
+            loginError.innerText='wrong email or password'
     }   
 
     const handleSignUp=()=>{
